@@ -5,10 +5,11 @@ public class BinarySearchTreeWithLinkedList {
   public BinarySearchTreeWithLinkedList() {
     root = null;
   }
+
+  // print the nodes value by using the inorder traversal (LDR)
 public void inordertraversal(Node troot)
 {
-  if(troot != null)
-  {
+  if(troot != null) {
     inordertraversal(troot.left);
     System.out.println(troot.data);
     inordertraversal(troot.right);
@@ -31,7 +32,6 @@ public void inordertraversal(Node troot)
             parent.left = newnode;
             return;
           }
-
         } else {
           current = current.right;
           if (current == null) {
