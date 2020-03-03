@@ -1,16 +1,15 @@
 public class BinarySearchTreeMain {
   public static void main(String[] args) {
     BinarySearchTreeWithLinkedList obj = new BinarySearchTreeWithLinkedList();
-    obj.insert(31);
-    obj.insert(16);
-    obj.insert(22);
-    obj.insert(7);
-    obj.insert(61);
-    obj.insert(45);
-    obj.insert(75);
-    obj.insert(17);
-    obj.insert(27);
+    obj.insert(20);
+
+//    obj.insert(60);
+//    obj.insert(80);
+//    obj.insert(10);
     obj.inordertraversal(obj.root);
+    obj.successor(obj.root);
+    obj.minimum();
+
   }
 
 

@@ -7,14 +7,40 @@ public class BinarySearchTreeWithLinkedList {
   }
 
   // print the nodes value by using the inorder traversal (LDR)
-public void inordertraversal(Node troot)
-{
-  if(troot != null) {
-    inordertraversal(troot.left);
-    System.out.println(troot.data);
-    inordertraversal(troot.right);
+  public void inordertraversal(Node troot) {
+    if (troot != null) {
+      inordertraversal(troot.left);
+      System.out.println(troot.data);
+      inordertraversal(troot.right);
+    }
   }
-}
+
+  public void successor(Node troot) {
+    if (troot == null) {
+      System.out.println("No node available");
+      return;
+    }
+    if (troot.left == null && troot.right == null) {
+      return;
+    }
+    Node temp = troot.right;
+    while (temp.left != null) {
+      temp = temp.left;
+    }
+    System.out.println(temp.data);
+  }
+
+  public void minimum() {
+    Node current = root;
+    Node last;
+
+    while (current != null) {
+      last = current;
+      current = current.left;
+    }
+    System.out.println("Minimumm value is " + current.data);
+  }
+
 
   public void insert(int value) {
     Node newnode = new Node();
