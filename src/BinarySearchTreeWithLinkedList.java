@@ -52,7 +52,6 @@ public class BinarySearchTreeWithLinkedList {
     // search complet
     // Leaf node deletion case
     if (current.left == null && current.right == null) {
-      System.out.println("Leaf node deletion case");
       if (current == root) {
         root = null;
       } else if (isLeftChild == true) {
